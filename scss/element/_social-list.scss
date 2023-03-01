@@ -1,0 +1,14 @@
+@import '../var';
+
+.social-list {
+    display: flex;
+    align-items: center;
+
+    &__item {
+        margin-right: 23px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

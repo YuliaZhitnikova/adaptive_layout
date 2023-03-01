@@ -1,0 +1,68 @@
+@import '../var';
+@import '../mixin';
+
+.header {
+    background-color: $main-bg;
+    padding: 37px 0px 0px;
+
+    &__nav {
+        @include flexBetweenCenter;
+        align-items: baseline;
+
+        @media screen and (max-width: 567px) {
+            justify-content: left;
+            gap: 30px;
+
+        }
+
+        @media screen and (max-width:992px) {
+
+            flex-wrap: wrap;
+
+            &>*:nth-child(1) {
+                order: 0;
+            }
+
+            &>*:nth-child(4) {
+                order: 2;
+            }
+
+            &>*:nth-child(5) {
+                order: 1;
+            }
+
+            .nav {
+                justify-content: center;
+                margin: 20px auto;
+                width: 100%;
+            }
+        }
+
+
+
+        .burger,
+        .menu {
+            @media screen and (min-width: 567px) {
+                display: none;
+            }
+        }
+
+        .nav {
+            @media screen and (max-width: 567px) {
+                display: none;
+            }
+        }
+
+
+
+    }
+
+    &__banner {
+        margin-top: 25px;
+
+        @media screen and (max-width: 760px) {
+            // display: flex;
+            // flex-direction: column;
+        }
+    }
+}

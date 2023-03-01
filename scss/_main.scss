@@ -1,0 +1,145 @@
+@import './var';
+@import './mixin';
+
+:root {
+    font-size: 0.75rem;
+
+    @media screen and (min-width: 567px) {
+        font-size: 0.875rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+        font-size: 1rem;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2,
+.h2 {
+    font-family: "Playfair Display";
+    font-size: 2.81rem;
+    font-weight: 400;
+    line-height: 3.75rem;
+}
+
+h3,
+.h3 {
+    font-family: "Playfair Display";
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.68rem;
+}
+
+h4,
+.h4 {
+    font-family: "Playfair Display";
+    font-size: 0.825rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+
+}
+
+p {
+    font-size: 0.825rem;
+    font-weight: 300;
+    line-height: 1.31rem;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @media screen and (min-width:576px) {
+        max-width: 540px;
+    }
+
+    @media screen and (min-width:768px) {
+        max-width: 720px;
+    }
+
+    @media screen and (min-width:992px) {
+        max-width: 960px;
+    }
+
+    @media screen and (min-width:1200px) {
+        max-width: 1140px;
+    }
+
+    @media screen and (min-width:1400px) {
+        max-width: 1320px;
+    }
+}
+
+.main-section {
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: 992px) {
+        margin-bottom: 5rem;
+    }
+}
+
+.link {
+    text-decoration: none;
+
+    &_section {
+        display: block;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.18rem;
+        color: #444240;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #C4C0B6;
+        width: fit-content;
+        width: -moz-fit-content;
+        margin-left: auto;
+    }
+
+    &:hover {
+        color: $accent-color;
+    }
+}
+
+.inherit-color {
+    color: inherit;
+}
+
+.label {
+    position: relative;
+    font-family: Prata;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.18rem;
+
+    white-space: nowrap;
+
+    &_left {
+
+        &::after {
+            @include line;
+            @include linePosition;
+            transform: translate(calc(100% + 35px), 0);
+        }
+    }
+
+    &_right {
+        &::before {
+            @include line;
+            @include linePosition;
+        }
+    }
+}
+
+.title {
+    &_section {
+        text-align: center;
+    }
+}

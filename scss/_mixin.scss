@@ -1,0 +1,38 @@
+@mixin standardText {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+@mixin flexBetweenCenter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin line {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color: $line-color;
+
+    @media screen and (max-width:1200px) {
+        width: 40px;
+    }
+
+    @media screen and (max-width:991px) {
+        width: 30px;
+    }
+
+    @media screen and (max-width:567px) {
+        display: none;
+    }
+}
+
+@mixin linePosition {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(calc(-100% - 15px), 0);
+}

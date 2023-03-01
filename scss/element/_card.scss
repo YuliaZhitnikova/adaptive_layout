@@ -1,0 +1,56 @@
+@import '../var';
+@import '../mixin';
+
+.card {
+    padding: 30px;
+    background-color: $lite-color;
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+    @media screen and (min-width:360px) {
+        width: calc(50% - 20px);
+    }
+
+    @media screen and (min-width:768px) {
+        width: calc(33.3333% - 20px);
+    }
+
+
+
+    &__label {
+        margin-left: 40px;
+        color: inherit;
+
+        &::before {
+            width: 30px;
+        }
+    }
+
+    &__price {
+        font-family: Prata;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+    }
+
+    &__img {
+        display: block;
+        border-radius: 50%;
+        box-shadow: 3px 1px 4px 0px rgb(85 82 72 / 23%);
+        width: 100%;
+        margin-bottom: 30px;
+
+        @media screen and (min-width:1440px) {
+            max-width: 313px;
+            max-height: 313px;
+        }
+    }
+
+    &-row {
+        display: flex;
+        margin: 20px -10px;
+        flex-wrap: wrap;
+    }
+}
